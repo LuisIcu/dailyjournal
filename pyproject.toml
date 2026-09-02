@@ -1,0 +1,14 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "dailyjournal"
+version = "0.1.0"
+requires-python = ">=3.11"
+authors = [{name="Luis Icú", email="lficu@insivumeh.gob.gt"}]
+description = "Small script to save my record of activities."
+dependencies = []
+
+[project.scripts]
+journal = "dailyjournal.dailyjournal:cli"
