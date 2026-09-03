@@ -11,4 +11,4 @@ description = "Small script to save my record of activities."
 dependencies = []
 
 [project.scripts]
-journal = "dailyjournal.dailyjournal:cli"
+myjournal = "dailyjournal.dailyjournal:cli"
