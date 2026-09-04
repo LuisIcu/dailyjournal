@@ -2,13 +2,13 @@ from .connection import get_connection
 from datetime import datetime
 from pprint import pprint
 
-def add_journal_entry(activity:str, date:datetime=None)->None:
+def add_journal_entry(activity:str, project:str, date:datetime=None)->None:
     if date is None:
         date = datetime.now()
     with get_connection() as conn:
         conn.execute(
-            'INSERT INTO activities (date, activity) VALUES (?, ?)',
-            (date, activity)
+            'INSERT INTO activities (date, activity, project) VALUES (?, ?, ?)',
+            (date, activity, project)
         )
         conn.commit()
     return
